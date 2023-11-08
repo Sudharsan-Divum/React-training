@@ -1,0 +1,52 @@
+.todoList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12% 0 0 0;
+  &_input {
+    padding: 8% 6%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: 600;
+
+    font-size: 18px;
+  }
+  &_button {
+    width: 50%;
+    background-color: cadetblue;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 6% 3%;
+    margin-top: 25px;
+    font-size: 32px;
+  }
+  &_list {
+    cursor: pointer;
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &_check {
+    word-spacing: 12px;
+    margin-right: 12px;
+  }
+  &_count {
+    background-color: #b2f6ff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 12% 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 20px;
+  }
+}
