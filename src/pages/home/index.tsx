@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { TodoList } from "../../components/todos/todoList/TodoList";
-import { TodoStore } from "../../components/todos/TodoStore";
+import { TodoStore } from "../../store/TodoStore";
 import { NavBar } from "../../components/navBar";
 
 export function Home() {

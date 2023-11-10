@@ -17,7 +17,6 @@ export const getCharacters = async () => {
 
   return response.json();
 
-  console.log(response);
 };
 
 export const getLocation = async () => {

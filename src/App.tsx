@@ -10,7 +10,6 @@ import { Router } from "react-router";
 function App() {
   return (
     <>
-    
       <Routing />
     </>
   );
