@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./todoList.scss";
 import { observable, values } from "mobx";
 import { observer } from "mobx-react";
-import { TodoStoreImpl } from "../TodoStore";
+import { TodoStoreImpl } from "../../../store/TodoStore";
 
 interface TodoListProps {
   todoStore: TodoStoreImpl;
