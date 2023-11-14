@@ -6,6 +6,8 @@ import { Card, CardBody } from "react-bootstrap";
 import loader from "../../images/loading.gif";
 import errorImg from "../../images/error.gif";
 import ReactPlayer from "react-player";
+import { ApiCalling } from "../../store/apiStore";
+import { useEffect } from "react";
 
 type itemProps = {
   name: string;
@@ -15,16 +17,22 @@ type itemProps = {
   gender: string;
   origin: object;
 };
-export function Integration() {
-  const data = useQuery({
-    queryKey: ["results"],
+ export function Integration() {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["data"],
     queryFn: getCharacters,
   });
-  if (data.isLoading) {
+  useEffect(() => {
+    if (!isLoading && !isError && data) {
+      ApiCalling.setCharacters(data?.result);
+      console.log(data.results, "results");
+    }
+  }, [data, isLoading, isError]);
+  if (isLoading) {
     return <img className="loader" src={loader} alt="" />;
   }
 
-  if (data.error) {
+  if (isError) {
     return (
       <>
         <p className="danger">Error while fetching data</p>
@@ -33,7 +41,7 @@ export function Integration() {
     );
   }
 
-  const result = data.data.results;
+  const result = data?.results;
   const changeImg = () => {};
 
   return (
@@ -64,3 +72,4 @@ export function Integration() {
     </>
   );
 }
+
