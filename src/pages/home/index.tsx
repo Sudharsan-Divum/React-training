@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.scss";
 import { TodoList } from "../../components/todos/todoList/TodoList";
 import { TodoStore } from "../../store/TodoStore";

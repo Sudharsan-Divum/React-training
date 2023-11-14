@@ -1,14 +1,7 @@
-import React, { useState } from "react";
-import { observable, observe, makeObservable, action } from "mobx";
-import { observer } from "mobx-react";
-import {
-  getCharacters,
-  getEpisodes,
-  getLocation,
-  getSections,
-} from "../serivces";
 
-const [arr, setArr] = useState({});
+import { observable, observe, makeObservable, action } from "mobx";
+
+
 interface sectionProps {
   character: string;
   location: string;
@@ -55,7 +48,6 @@ class apiCallingImpl {
   characters: characProps[] = [];
   location: locationProps[] = [];
   episode: episodeProps[] = [];
-
   constructor() {
     makeObservable(this, {
       sections: observable,
@@ -64,6 +56,23 @@ class apiCallingImpl {
       episode: observable,
     });
   }
+  setSections(data: sectionProps[]) {
+    this.sections = data;
+  }
+
+  setCharacters(data: characProps[]) {
+    this.characters = data;
+
+  }
+
+  setLocation(data: locationProps[]) {
+    this.location = data;
+  }
+
+  setEpisodes(data: episodeProps[]) {
+    this.episode = data;
+  }
 }
 
 export const ApiCalling = new apiCallingImpl();
+
