@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+
 import { observable, makeObservable, action, computed } from "mobx";
-import { observer } from "mobx-react";
+
 
 interface TodoItem {
   id: number;
