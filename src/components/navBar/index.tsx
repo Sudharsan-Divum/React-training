@@ -1,4 +1,6 @@
+import { Profile } from "../profile";
 import "./index.scss";
+import user from "../../images/userIcon.svg";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
@@ -14,7 +16,17 @@ export const NavBar = () => {
             {" "}
             React Query{" "}
           </Link>
-          <Link className="header_link-text" to={"/rick-and-morty"}> Rick And Morty </Link>
+          <Link className="header_link-text" to={"/rick-and-morty"}>
+            {" "}
+            Rick And Morty{" "}
+          </Link>
+          <Link to="/posts" className="header_link-text">
+            {" "}
+            Posts{" "}
+          </Link>
+          <Link to="/profile">
+            <img src={user} className="user-img" />
+          </Link>
         </div>
       </div>
     </>

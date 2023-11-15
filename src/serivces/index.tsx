@@ -17,3 +17,20 @@ export const getLocation = async () => {
 export const getEpisodes = async () => {
   return (await fetch("https://rickandmortyapi.com/api/episode")).json();
 };
+
+interface dataProps {
+  title: string;
+  userId: number;
+  body: string;
+}
+export const addPost = async (data: dataProps) => {
+  return (
+    await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+  ).json();
+};
