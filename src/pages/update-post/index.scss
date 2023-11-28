@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.update {
+  &_whole-wrapper {
+  }
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    &_title-text {
+      font-size: 32px;
+      font-style: oblique;
+      font-weight: 500;
+      font-family: 'Lobster', sans-serif;
+      text-transform: uppercase;
+    }
+    &_title-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      &_title {
+        padding: 1rem 2rem;
+        width: 100%;
+        margin: 1rem;
+        border: 2px solid;
+      }
+      &_body {
+        padding: 2rem 1rem;
+        width: 100%;
+        margin: 1rem;
+        border: 2px solid;
+        height: fit-content;
+      }
+    }
+    &_button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      position: relative;
+      &_submit {
+        position: relative;
+        left: 0;
+        display: flex;
+        margin-right: 130px;
+        padding: 12px 25px;
+        border: 2px solid;
+        background-color: rgb(3, 104, 0);
+        color: #fff;
+        border-radius: 15px;
+        width: 100%;
+        font-family: 'Lobster', sans-serif;
+        font-size: 18px;
+      }
+      &_cancel {
+        position: relative;
+        left: 0;
+        display: flex;
+        padding: 12px 25px;
+        border: 2px solid;
+        background-color: rgb(219, 49, 49);
+        color: #fff;
+        border-radius: 15px;
+        width: 100%;
+        font-family: 'Lobster', sans-serif;
+        font-size: 18px;
+        // margin-right: 130px;
+      }
+    }
+  }
+}

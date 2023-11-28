@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import { NavBar } from "../../components/navBar";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { addPost } from "../../serivces";
-import { postStore } from "../../store/postStore";
 
 interface dataProps {
   title: string;

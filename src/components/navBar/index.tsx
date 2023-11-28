@@ -1,4 +1,3 @@
-import { Profile } from "../profile";
 import "./index.scss";
 import user from "../../images/userIcon.svg";
 import { Link } from "react-router-dom";
@@ -25,7 +24,7 @@ export const NavBar = () => {
             Posts{" "}
           </Link>
           <Link to="/profile">
-            <img src={user} className="user-img" />
+            <img src={user} className="user-img" alt="user-img" />
           </Link>
         </div>
       </div>

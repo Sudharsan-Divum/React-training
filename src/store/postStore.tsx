@@ -12,9 +12,13 @@ class postStoreImpl {
     makeObservable(this, {
       posts: observable,
       addPost: action,
+      updatePost: action,
     });
   }
   addPost(data: dataProps) {
+    this.posts.push(data);
+  }
+  updatePost(data: dataProps) {
     this.posts.push(data);
   }
 }

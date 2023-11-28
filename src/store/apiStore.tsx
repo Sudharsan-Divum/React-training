@@ -1,6 +1,4 @@
-
-import { observable, observe, makeObservable, action } from "mobx";
-
+import { observable, makeObservable } from "mobx";
 
 interface sectionProps {
   character: string;
@@ -15,10 +13,10 @@ interface characProps {
   species: string;
   type: string;
   gender: string;
-  origin: object;
-  location: object;
-  image: {};
-  episode: [];
+  origin: { name: string; url: string };
+  location: { name: string; url: string };
+  image: string;
+  episode: [""];
   url: string;
   created: string;
 }
@@ -48,6 +46,7 @@ class apiCallingImpl {
   characters: characProps[] = [];
   location: locationProps[] = [];
   episode: episodeProps[] = [];
+  singleCharacter: characProps[] = [];
   constructor() {
     makeObservable(this, {
       sections: observable,
@@ -62,7 +61,6 @@ class apiCallingImpl {
 
   setCharacters(data: characProps[]) {
     this.characters = data;
-
   }
 
   setLocation(data: locationProps[]) {
@@ -72,7 +70,13 @@ class apiCallingImpl {
   setEpisodes(data: episodeProps[]) {
     this.episode = data;
   }
+
+  setSingleCharacters(data: characProps[]) {
+    this.singleCharacter = data;
+    console.log( "Single Character Store ===>", this.singleCharacter)
+  }
+  
+  
 }
 
 export const ApiCalling = new apiCallingImpl();
-

@@ -1,5 +1,3 @@
-import React from "react";
-import user from "../../images/userIcon.svg";
 import "./index.scss";
 import { NavBar } from "../navBar";
 
@@ -14,9 +12,14 @@ export function Profile() {
           <div className="profile_details">
             <span className="profile_details_title">PROFILE</span>
             <div className="profile_details_wrapper">
-              <div className="profile_details_name">Name : {" "} Sudharsan </div>
-              <div className="profile_details_mail"> E-Mail : {" "} sudharsa.selvasekar@divum.in </div>
-              <div className="profile_details_password" >Password :  {" "} ........ </div>
+              <div className="profile_details_name">Name : Sudharsan </div>
+              <div className="profile_details_mail">
+                {" "}
+                E-Mail : sudharsa.selvasekar@divum.in{" "}
+              </div>
+              <div className="profile_details_password">
+                Password : ........{" "}
+              </div>
             </div>
           </div>
         </div>
